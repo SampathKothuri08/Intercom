@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "738420407244",
+    "project_id": "fir-test-a92d3",
+    "storage_bucket": "fir-test-a92d3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738420407244:android:3c9214453d93b139aebb69",
+        "android_client_info": {
+          "package_name": "com.group2.dummy_ecc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQgJwsY7C_AR1_XaO3h8abbF_iH4pUTmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738420407244:android:58b04ae7d1200e20aebb69",
+        "android_client_info": {
+          "package_name": "com.group2.intercom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQgJwsY7C_AR1_XaO3h8abbF_iH4pUTmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738420407244:android:c9e902a37f940399aebb69",
+        "android_client_info": {
+          "package_name": "unh.hnh.securechat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQgJwsY7C_AR1_XaO3h8abbF_iH4pUTmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

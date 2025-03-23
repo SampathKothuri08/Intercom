@@ -1,12 +1,15 @@
 package com.group2.dummy_ecc
 
-import android.util.Log
 import com.group2.intercom.FileED
 import java.io.File
 import java.security.PublicKey
 import javax.crypto.Cipher
 import org.bouncycastle.jce.provider.BouncyCastleProvider
+import java.security.KeyFactory
 import java.security.Security
+import java.security.spec.X509EncodedKeySpec
+import android.util.Base64
+import android.util.Log
 
 object FileEncryptor : FileED() {
 
@@ -42,6 +45,17 @@ object FileEncryptor : FileED() {
             cipher.doFinal(str.toByteArray())
         } catch (e: Exception) {
             Log.e("ENCRYPT", "Encryption error: ${e.message}")
+            null
+        }
+    }
+    fun stringToPublicKey(publicKeyString: String, algorithm: String = "RSA"): PublicKey? {
+        return try {
+            val publicKeyBytes = Base64.decode(publicKeyString, Base64.DEFAULT)
+            val keySpec = X509EncodedKeySpec(publicKeyBytes)
+            val keyFactory = KeyFactory.getInstance(algorithm)
+            keyFactory.generatePublic(keySpec)
+        } catch (e: Exception) {
+            e.printStackTrace()
             null
         }
     }
