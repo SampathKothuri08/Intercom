@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- User 1 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User 1"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtUser1Message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter message as User 1" />
+
+        <Button
+            android:id="@+id/btnUser1Send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send from User 1" />
+
+        <TextView
+            android:id="@+id/txtUser2Received"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingTop="8dp"
+            android:textSize="16sp"
+            android:textIsSelectable="true" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="16dp" />
+
+        <!-- User 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User 2"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtUser2Message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter message as User 2" />
+
+        <Button
+            android:id="@+id/btnUser2Send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send from User 2" />
+
+        <TextView
+            android:id="@+id/txtUser1Received"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingTop="8dp"
+            android:textSize="16sp"
+            android:textIsSelectable="true" />
+    </LinearLayout>
+</ScrollView>
