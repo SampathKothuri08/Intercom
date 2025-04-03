@@ -14,7 +14,7 @@ class ChatAdapter(private val currentUserId: String, private val messages: List<
     private val MSG_TYPE_LEFT = 2
 
     override fun getItemViewType(position: Int): Int {
-        Log.w("CHECK",messages[position].senderID.toString())
+        Log.w("CHECK", "senderID= $messages[position].senderID.toString()")
         return if (messages[position].senderID == currentUserId) MSG_TYPE_RIGHT else MSG_TYPE_LEFT
     }
 

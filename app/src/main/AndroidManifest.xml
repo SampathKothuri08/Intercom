@@ -18,16 +18,29 @@
 
         <!-- ✅ MainActivity now launches first -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginUserIdActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
 
         <!-- Other activities -->
-        <activity android:name=".LoginUserIdActivity" />
+        <activity android:name=".MainActivity" />
+
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <!-- Other activities -->
+<!--        <activity android:name=".LoginUserIdActivity" />-->
+
         <activity android:name=".DeviceInfo" />
         <activity android:name=".ChatActivity" />
 

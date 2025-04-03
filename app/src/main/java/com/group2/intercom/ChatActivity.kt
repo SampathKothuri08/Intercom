@@ -41,7 +41,7 @@ class ChatActivity : AppCompatActivity() {
                 if(document != null) {
                     senderpublicd = document.data?.get("user1Key")!!.toString()
                     receiverpublicd = document.data?.get("user2Key")!!.toString()
-                    Log.w("CHECK",stringToPublicKey(senderpublicd).toString())
+//                    Log.w("CHECK",stringToPublicKey(senderpublicd).toString())
                 }
                 else {
                     Log.w("CHECK", "ERROR")
@@ -61,6 +61,9 @@ class ChatActivity : AppCompatActivity() {
 
         txtChatUser.text = selectedUserId
 
+        Log.w("CHECK", "curr user: $currentUserId")
+        Log.w("CHECK", "selectedUser: $selectedUserId")
+
         adapter = ChatAdapter(currentUserId, messageList)
         chatRecyclerView.layoutManager = LinearLayoutManager(this)
         chatRecyclerView.adapter = adapter
@@ -79,19 +82,17 @@ class ChatActivity : AppCompatActivity() {
         val message = Message(
             senderID = currentUserId,
             receiverID = selectedUserId,
-            msg_sent = FileEncryptor.textEncryption(text,
-                stringToPublicKey(senderpublicd.toString())!!
-            ).toString(),
+            msg_sent = text,
             msg_received = text,
             timestamp = Timestamp.now()
         )
-        firestore.collection("Chatrooms").document("user1_user2")
+        firestore.collection("Chatrooms").document("user4_user1")
             .collection("chat").add(message)
     }
 
     private fun listenForMessages() {
         messageListener = firestore.collection("Chatrooms")
-            .document("user1_user2")
+            .document("user4_user1")
             .collection("chat")
             .orderBy("timestamp")
             .addSnapshotListener { snapshot, _ ->
